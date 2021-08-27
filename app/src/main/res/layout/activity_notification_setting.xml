@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_bg"
+    tools:context=".view.activity.main.profile.NotificationSettingActivity">
+
+    <include layout="@layout/toolbar_gradient"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:text="@string/subscribe_address_radius"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_title"/>
+
+
+            <LinearLayout
+                android:id="@+id/ll_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.warkiz.widget.IndicatorStayLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin_small"
+                    android:layout_marginRight="@dimen/activity_vertical_margin_small"
+                    android:layout_marginTop="@dimen/activity_vertical_margin_small"
+                    >
+
+                    <com.warkiz.widget.IndicatorSeekBar
+                        android:id="@+id/isb_range"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:isb_max="200"
+                        app:isb_min="1"
+                        app:isb_show_tick_texts="true"
+                        app:isb_show_indicator="rectangle"
+                        app:isb_thumb_color="@color/colorBlack"
+                        app:isb_thumb_text_color="@color/colorGray"
+                        app:isb_track_progress_color="@color/colorBlack"
+                        app:isb_indicator_text_color="@color/colorGray"
+                        app:isb_indicator_color="@color/colorWhite"
+                        app:isb_indicator_text_size="@dimen/text_small"/>
+
+                </com.warkiz.widget.IndicatorStayLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_industry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin_small"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_industry_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_view_height_normal"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@drawable/corner_field"
+                    android:gravity="center_vertical">
+
+                    <com.toolsbox.contractor.view.customUI.IconEditText
+                        android:id="@+id/et_industry"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/text_view_height_normal"
+                        android:hint="@string/industry"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:drawablePadding="8dp"
+                        android:drawableLeft="@drawable/tf_job_b"
+                        android:textCursorDrawable="@color/colorBlack"
+                        app:compoundDrawableHeight="20dp"
+                        app:compoundDrawableWidth="20dp"
+                        android:background="@drawable/corner_field_black"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/text_title"
+                        android:textColor="@color/colorBlack"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_industry"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"/>
+
+                </RelativeLayout>
+
+                <co.lujun.androidtagview.TagContainerLayout
+                    android:id="@+id/tag_industry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:container_background_color="@color/colorTransparent"
+                    app:container_border_radius="0dp"
+                    app:container_border_width="0dp"
+                    app:container_enable_drag="true"
+                    app:tag_background_color="@color/colorTransparent"
+                    app:tag_border_color="@color/colorBlack"
+                    app:tag_text_color="@color/colorBlack"
+                    app:tag_corner_radius="5dp"
+                    app:horizontal_interval="10dp"
+                    app:vertical_interval="10dp"
+                    app:tag_clickable="true"
+                    app:tag_theme="none" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_normal"
+                android:layout_marginLeft="@dimen/activity_vertical_margin_normal"
+                android:layout_marginRight="@dimen/activity_vertical_margin_normal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_rounded_25"
+                android:text="@string/update"
+                android:textSize="@dimen/text_title"
+                android:layout_centerVertical="true"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+</LinearLayout>

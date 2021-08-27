@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.activity.login.Signup2Activity"
+    android:background="@color/colorBlue"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@drawable/ripple_bg_borderless_oval"
+            app:srcCompat="@drawable/ic_back"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp">
+
+        <com.toolsbox.contractor.view.customUI.IconEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_view_height_normal"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:hint="@string/email"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:drawablePadding="8dp"
+            android:drawableLeft="@drawable/tf_email_w"
+            android:textCursorDrawable="@color/colorWhite"
+            app:compoundDrawableHeight="20dp"
+            app:compoundDrawableWidth="20dp"
+            android:background="@drawable/corner_field"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="@dimen/text_title"
+            android:textColor="@color/colorWhite"/>
+
+        <com.toolsbox.contractor.view.customUI.IconEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_view_height_normal"
+            android:layout_marginTop="16dp"
+            android:hint="@string/password"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:drawablePadding="8dp"
+            android:drawableLeft="@drawable/tf_password_w"
+            app:compoundDrawableHeight="20dp"
+            app:compoundDrawableWidth="20dp"
+            android:textCursorDrawable="@color/colorWhite"
+            android:background="@drawable/corner_field"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="@dimen/text_title"
+            android:textColor="@color/colorWhite"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:theme="@style/checkBoxStyle"
+                android:buttonTint="@color/colorWhite"
+                android:textSize="@dimen/text_normal"
+               />
+
+            <TextView
+                android:id="@+id/tv_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_normal"
+                android:text="@string/i_agree_to_the_terms"/>
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_register"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_normal"
+            android:clickable="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin_normal"
+            android:foreground="?android:attr/selectableItemBackground"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardElevation="0dp"
+            app:cardCornerRadius="25dp"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/corner_button"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:paddingRight="3dp"
+                    android:text="@string/create_accont"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/button_font_normal" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/activity_vertical_margin_high"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:textSize="@dimen/text_small"
+            android:text="@string/copyright_jobs"
+            android:textColor="@color/colorWhite"/>
+
+    </RelativeLayout>
+</LinearLayout>

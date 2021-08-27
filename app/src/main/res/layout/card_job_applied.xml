@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".view.activity.main.jobs.AppliedJobActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_photo"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_avatar"
+                    app:civ_border_color="#666666"/>
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/iv_profile"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:fontFamily="@font/montserrat_light"-->
+                <!--android:text="active 2 hours"-->
+                <!--android:textColor="@color/colorBlue"-->
+                <!--android:textSize="@dimen/text_super_small"/>-->
+
+                <Button
+                    android:id="@+id/btn_chat"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorWhite"
+                    android:layout_toLeftOf="@+id/btn_review"
+                    android:textAllCaps="false"
+                    android:background="@drawable/state_button_blue"
+                    android:text="@string/chat"
+                    android:textSize="@dimen/text_title"/>
+
+                <Button
+                    android:id="@+id/btn_review"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorWhite"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:textAllCaps="false"
+                    android:background="@drawable/state_button_blue"
+                    android:text="@string/reviews"
+                    android:textSize="@dimen/text_title"/>
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_value"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_row_height"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/tf_dollar"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quotation_value"
+                    android:textColor="@color/colorSpliteLine"
+                    android:textSize="@dimen/text_normal" />
+
+                <TextView
+                    android:id="@+id/tv_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/colorGray"
+                    android:gravity="right"
+                    android:textSize="@dimen/text_normal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_row_height"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/tf_user"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/specialist"
+                    android:textColor="@color/colorSpliteLine"
+                    android:textSize="@dimen/text_normal" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/colorGray"
+                    android:gravity="right"
+                    android:textSize="@dimen/text_normal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_row_height"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/tf_title"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/title_of_specialist"
+                    android:textColor="@color/colorSpliteLine"
+                    android:textSize="@dimen/text_normal" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/colorGray"
+                    android:gravity="right"
+                    android:textSize="@dimen/text_normal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_completed_job"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_row_height"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/tf_check"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/name_of_completed_job"
+                    android:textColor="@color/colorSpliteLine"
+                    android:textSize="@dimen/text_normal" />
+
+                <TextView
+                    android:id="@+id/tv_completed_job"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/colorGray"
+                    android:gravity="right"
+                    android:text="0"
+                    android:textSize="@dimen/text_normal"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_overall_rating"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_row_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_overall_rating"
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/ic_rating"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv_overall_rating"
+                    android:text="@string/overall_rating"
+                    android:textColor="@color/colorSpliteLine"
+                    android:textSize="@dimen/text_normal" />
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/overall_rating"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:rating="5"
+                    app:mrb_progressTint="@color/colorRed"
+                    app:mrb_secondaryProgressTint="@color/colorRed"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/ll_time_rating"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_row_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_time_rating"
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/ic_rating"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv_time_rating"
+                    android:text="@string/time_commitment"
+                    android:textColor="@color/colorSpliteLine"
+                    android:textSize="@dimen/text_normal" />
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/time_rating"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    app:mrb_progressTint="@color/colorRed"
+                    app:mrb_secondaryProgressTint="@color/colorRed"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:rating="5"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_review"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_row_height"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/ic_rating"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/reviews"
+                    android:textColor="@color/colorSpliteLine"
+                    android:textSize="@dimen/text_normal" />
+
+                <TextView
+                    android:id="@+id/tv_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/colorGray"
+                    android:gravity="right"
+                    android:text="0"
+                    android:textSize="@dimen/text_normal"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_starting_dates"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_row_height"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_starting_dates"
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/tf_availability"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_starting_dates"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/available_starting_dates"
+                    android:textColor="@color/colorSpliteLine"
+                    android:textSize="@dimen/text_normal" />
+
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ripple_bg_borderless_oval"
+                    app:srcCompat="@drawable/ic_arrow_right"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_estimated_days"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_row_height"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/tf_availability"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/estimated_completion_time"
+                    android:textColor="@color/colorSpliteLine"
+                    android:textSize="@dimen/text_normal" />
+
+                <TextView
+                    android:id="@+id/tv_estimated_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/colorGray"
+                    android:gravity="right"
+                    android:textSize="@dimen/text_normal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_detail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_row_height"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/tf_business_name"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/description"
+                    android:textColor="@color/colorSpliteLine"
+                    android:textSize="@dimen/text_normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_normal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/btn_accept"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorWhite"
+                    android:textAllCaps="false"
+                    android:background="@drawable/state_button_green"
+                    android:text="@string/accept"
+                    android:textSize="@dimen/text_title"/>
+
+                <Button
+                    android:id="@+id/btn_decline"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin_normal"
+                    android:textColor="@color/colorWhite"
+                    android:textAllCaps="false"
+                    android:background="@drawable/state_button_blue"
+                    android:text="@string/decline"
+                    android:textSize="@dimen/text_title"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+

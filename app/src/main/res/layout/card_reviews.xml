@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".view.activity.main.market.ReviewsActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="ddd"
+                android:textSize="@dimen/text_normal"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"/>
+
+            <RelativeLayout
+                android:id="@+id/ll_overall_rating"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_row_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_overall_rating"
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/ic_rating"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv_overall_rating"
+                    android:text="@string/overall_rating"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/text_normal" />
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/overall_rating"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:rating="2.5"
+                    app:mrb_progressTint="@color/colorRed"
+                    app:mrb_secondaryProgressTint="@color/colorRed"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_work_rating"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_row_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_work_rating"
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/ic_rating"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv_work_rating"
+                    android:text="@string/work_quality"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/text_normal" />
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/work_rating"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    app:mrb_progressTint="@color/colorRed"
+                    app:mrb_secondaryProgressTint="@color/colorRed"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:rating="4"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_time_rating"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_row_height"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_time_rating"
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/ic_rating"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv_time_rating"
+                    android:text="@string/time_commitment"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/text_normal" />
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/time_rating"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    app:mrb_progressTint="@color/colorRed"
+                    app:mrb_secondaryProgressTint="@color/colorRed"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:rating="4"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_photo"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_avatar"
+                        app:civ_border_color="#666666"/>
+
+                    <TextView
+                        android:id="@+id/tv_customer_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:text="sss"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/text_normal"
+                        android:textColor="@color/colorGray"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/tf_calendar"/>
+
+                    <TextView
+                        android:id="@+id/tv_review_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:text="Apr 29 at 22:10"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/text_normal"
+                        android:textColor="@color/colorGray"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+

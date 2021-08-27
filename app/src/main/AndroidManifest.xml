@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.toolsbox.contractor">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".TBApplication"
+        android:allowBackup="false"
+        android:appComponentFactory="ToolsBox"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup,android:appComponentFactory">
+        <activity android:name=".view.activity.login.forgot.NewPasswordActivity"></activity>
+        <activity android:name=".view.activity.login.forgot.ForgotEmailActivity" />
+        <activity android:name=".view.activity.main.profile.PinCodeActivity" />
+        <activity android:name=".view.activity.main.profile.ProfileInfoActivity"></activity>
+        <activity android:name=".view.activity.main.market.ProposalDetailActivity" />
+        <activity android:name=".view.activity.main.jobs.SeeAvailabilityActivity" />
+        <activity android:name=".view.activity.login.StartupActivity" />
+        <activity android:name=".view.activity.main.profile.NotificationSettingActivity" />
+        <activity android:name=".view.activity.main.messages.ChatActivity" />
+        <activity android:name=".view.activity.main.profile.AddBankActivity" />
+        <activity android:name=".view.activity.main.profile.EditProfileActivity" />
+        <activity android:name=".view.activity.main.jobs.ImagePreviewActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCzrYMTRbeIrERXujvg_eg7GJhLwpZWzO4" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorBlue" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <service android:name=".controller.service.FBMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".view.activity.main.market.QuoteActivity" />
+        <activity android:name=".view.activity.main.market.JobResultActivity" />
+        <activity android:name=".view.activity.login.Signup2Activity" />
+        <activity android:name=".view.activity.login.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.login.SignupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.login.SliderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.login.EnterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.main.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.main.market.ContractorResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.main.home.PostJobActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.main.jobs.AppliedJobActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.main.jobs.JobFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.activity.main.market.AddReviewActivity" />
+        <activity android:name=".view.activity.main.market.ReviewsActivity" />
+        <activity android:name=".view.activity.main.jobs.DisputeJobActivity" />
+        <activity android:name=".view.activity.main.jobs.JobDetailActivity" />
+        <activity android:name=".view.activity.main.jobs.JobDetail2Activity" />
+        <activity android:name=".view.activity.main.home.IndustrySelectActivity" />
+        <activity android:name=".view.activity.main.profile.ImageCropActivity" />
+        <activity
+            android:name=".view.activity.main.home.CalendarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.main.profile.InputCCActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.main.profile.CreditCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.main.profile.BanksActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

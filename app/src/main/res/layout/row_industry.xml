@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckedTextView
+        android:id="@+id/ctv_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/dispute_form"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/text_title"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:checked="false"/>
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "1044092476602",
+    "firebase_url": "https://toolsbox-1f1c2.firebaseio.com",
+    "project_id": "toolsbox-1f1c2",
+    "storage_bucket": "toolsbox-1f1c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044092476602:android:58922c204ab4c1fd",
+        "android_client_info": {
+          "package_name": "com.toolsbox.contractor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044092476602-b9cqt6vgevijoio3pccuuno6gamlfd6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbdW4vvGKu2zOhmQh13Uf5rTR4BqA6WBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044092476602-b9cqt6vgevijoio3pccuuno6gamlfd6i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1044092476602-r5bmf7g31lcud4d6ohv0ot7nec4ec5v9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.toolsbox.contractor"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044092476602:android:2cb4e72ded6a43e6",
+        "android_client_info": {
+          "package_name": "com.toolsbox.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044092476602-b9cqt6vgevijoio3pccuuno6gamlfd6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbdW4vvGKu2zOhmQh13Uf5rTR4BqA6WBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044092476602-b9cqt6vgevijoio3pccuuno6gamlfd6i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1044092476602-r5bmf7g31lcud4d6ohv0ot7nec4ec5v9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.toolsbox.contractor"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

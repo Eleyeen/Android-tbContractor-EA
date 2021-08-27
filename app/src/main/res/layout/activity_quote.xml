@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_bg"
+    tools:context=".view.activity.main.market.QuoteActivity">
+
+    <include layout="@layout/toolbar_gradient" />
+
+    <LinearLayout
+        android:id="@+id/ll_focus"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/activity_vertical_margin">
+
+
+            <RelativeLayout
+                android:id="@+id/ll_type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_type"
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/tf_job_b"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_type"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/job_type"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_title" />
+
+                <segmented_control.widget.custom.android.com.segmentedcontrol.SegmentedControl
+                    android:id="@+id/segmented_control"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    app:columnCount="2"
+                    android:layout_centerVertical="true"
+                    app:distributeEvenly="true"
+                    app:textSize="@dimen/text_normal"
+                    app:selectedTextColor="@color/colorBlack"
+                    app:unSelectedTextColor="@color/colorBlack"
+                    app:unSelectedBackgroundColor="@color/colorLightWhite"
+                    app:selectedBackgroundColor="@color/colorBlue"
+                    app:selectedStrokeColor="@color/colorTransparent"
+                    app:unSelectedStrokeColor="@color/colorTransparent"
+                    app:textVerticalPadding="6dp"
+                    app:radius="5dp"
+                    android:layout_alignParentRight="true"
+                    app:segments="@array/arr_job_type" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/ll_value"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_value"
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/tf_dollar_b"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_value"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quote_value_or_hourly_rate"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_title" />
+
+
+                <EditText
+                    android:id="@+id/et_value"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/corner_field_black"
+                    android:textCursorDrawable="@color/colorBlack"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_title"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:inputType="number"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:textSize="@dimen/text_small"
+                android:text="@string/quote_value_description"/>
+
+            <RelativeLayout
+                android:id="@+id/ll_start_date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_start_date"
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/tf_availability_b"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_start_date"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/availability_scheduling_time_date"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_title" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_view_height_normal"
+                android:background="@drawable/corner_field"
+                android:gravity="center_vertical">
+
+                <com.toolsbox.contractor.view.customUI.IconEditText
+                    android:id="@+id/et_start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_view_height_normal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/tf_right_b"
+                    android:textCursorDrawable="@color/colorBlue"
+                    app:compoundDrawableHeight="20dp"
+                    app:compoundDrawableWidth="20dp"
+                    android:background="@drawable/corner_field_black"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_title"
+                    android:textColor="@color/colorBlack"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"/>
+
+            </RelativeLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_details_height"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/corner_field_black"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/tf_business_name_b"/>
+
+                <EditText
+                    android:id="@+id/et_details"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:textCursorDrawable="@color/colorBlack"
+                    android:textSize="@dimen/text_title"
+                    android:textColor="@color/colorBlack"
+                    android:hint="@string/describe_your_proposal"
+                    android:background="@color/colorTransparent"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constrainedHeight="true"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:scrollbars="vertical"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:textSize="@dimen/text_small"
+                android:text="@string/note_quote"/>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_normal"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="@dimen/activity_vertical_margin_normal"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin_high"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_rounded_25"
+                android:text="@string/apply"
+                android:textSize="@dimen/text_title"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

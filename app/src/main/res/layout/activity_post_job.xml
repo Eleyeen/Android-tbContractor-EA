@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".view.activity.main.home.PostJobActivity">
+
+    <include layout="@layout/toolbar_default" />
+
+    <LinearLayout
+        android:id="@+id/ll_focus"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
+
+
+
+            <com.toolsbox.contractor.view.customUI.IconEditText
+                android:id="@+id/et_job_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_view_height_normal"
+                android:hint="@string/what_are_you_looking"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:drawablePadding="8dp"
+                android:drawableLeft="@drawable/tf_search"
+                android:textCursorDrawable="@color/colorBlue"
+                app:compoundDrawableHeight="20dp"
+                app:compoundDrawableWidth="20dp"
+                android:background="@drawable/corner_field"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:inputType="textCapSentences"
+                android:singleLine="true"
+                android:textColorHint="@color/colorLightGray"
+                android:textSize="@dimen/text_title"
+                android:textColor="@color/colorGray"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_industry_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_view_height_normal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/corner_field"
+                android:gravity="center_vertical">
+
+                <com.toolsbox.contractor.view.customUI.IconEditText
+                    android:id="@+id/et_industry"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_view_height_normal"
+                    android:hint="@string/industry"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:drawablePadding="8dp"
+                    android:drawableLeft="@drawable/tf_job"
+                    android:textCursorDrawable="@color/colorBlue"
+                    app:compoundDrawableHeight="20dp"
+                    app:compoundDrawableWidth="20dp"
+                    android:background="@drawable/corner_field"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColorHint="@color/colorLightGray"
+                    android:textSize="@dimen/text_title"
+                    android:textColor="@color/colorGray"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_industry"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"/>
+
+            </RelativeLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_view_height_normal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/corner_field"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_area"
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:layout_marginLeft="8dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/tf_location"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/et_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_area"
+                    android:hint="@string/area"
+                    android:textCursorDrawable="@color/colorBlue"
+                    android:textColorHint="@color/colorLightGray"
+                    android:textSize="@dimen/text_title"
+                    android:textColor="@color/colorGray"
+                    android:background="@android:color/transparent"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_view_height_normal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/corner_field"
+                android:gravity="center_vertical">
+
+
+                <com.toolsbox.contractor.view.customUI.IconEditText
+                    android:id="@+id/et_availability"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_view_height_normal"
+                    android:hint="@string/availability"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="12dp"
+                    android:drawablePadding="8dp"
+                    android:drawableLeft="@drawable/tf_availability"
+                    android:drawableRight="@drawable/ic_arrow_right"
+                    android:textCursorDrawable="@color/colorBlue"
+                    app:compoundDrawableHeight="24dp"
+                    app:compoundDrawableWidth="24dp"
+                    android:background="@drawable/corner_field"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColorHint="@color/colorLightGray"
+                    android:textSize="@dimen/text_title"
+                    android:textColor="@color/colorGray"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_availability"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_view_height_normal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/corner_field"
+                android:gravity="center_vertical">
+
+
+                <Spinner
+                    android:id="@+id/sp_urgency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:textSize="@dimen/text_title"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/iv_urgency"
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:layout_marginLeft="8dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/tf_urgency"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_details_height"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/corner_field"
+                android:padding="8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/ic_size_small"
+                    android:layout_height="@dimen/ic_size_small"
+                    android:src="@drawable/tf_business_name"/>
+
+                <EditText
+                    android:id="@+id/et_details"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="top"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:textCursorDrawable="@color/colorBlue"
+                    android:textSize="@dimen/text_title"
+                    android:textColor="@color/colorGray"
+                    android:textColorHint="@color/colorLightGray"
+                    android:hint="@string/job_post_description"
+                    android:background="@color/colorTransparent"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_normal"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="@dimen/activity_vertical_margin_normal"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin_high"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_rounded_25"
+                android:text="@string/submit"
+                android:textSize="@dimen/text_title"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+

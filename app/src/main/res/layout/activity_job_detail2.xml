@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_bg"
+    tools:context=".view.activity.main.jobs.JobDetailActivity">
+
+    <include layout="@layout/toolbar_gradient" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:id="@+id/ll_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_job_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="7dp"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_high" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_row_height"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/ic_size_small"
+                            android:layout_height="@dimen/ic_size_small"
+                            android:src="@drawable/tf_status_b"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/status"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_normal" />
+
+                        <TextView
+                            android:id="@+id/tv_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="right"
+                            android:textSize="@dimen/text_normal"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_total_hour"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_row_height"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/ic_size_small"
+                            android:layout_height="@dimen/ic_size_small"
+                            android:src="@drawable/tf_esimate_b"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/specialist_total_hour"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_normal" />
+
+                        <TextView
+                            android:id="@+id/tv_total_hour"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="right"
+                            android:textSize="@dimen/text_normal"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_hourly_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_row_height"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/ic_size_small"
+                            android:layout_height="@dimen/ic_size_small"
+                            android:src="@drawable/tf_dollar_b"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/hourly_rate"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_normal" />
+
+                        <TextView
+                            android:id="@+id/tv_hourly_rate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="right"
+                            android:textSize="@dimen/text_normal"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_customer"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_row_height"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/ic_size_small"
+                            android:layout_height="@dimen/ic_size_small"
+                            android:src="@drawable/tf_user_b"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/customer"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_normal" />
+
+                        <TextView
+                            android:id="@+id/tv_customer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="right"
+                            android:textSize="@dimen/text_normal"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_industry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="@dimen/ic_size_small"
+                            android:layout_height="@dimen/ic_size_small"
+                            android:src="@drawable/tf_job_b"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/industry"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_normal" />
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:id="@+id/tv_industry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="right"
+                            android:textSize="@dimen/text_normal"
+                            android:ellipsize="end"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_post_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_row_height"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/ic_size_small"
+                            android:layout_height="@dimen/ic_size_small"
+                            android:src="@drawable/tf_date_b"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/post_date"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_normal" />
+
+                        <TextView
+                            android:id="@+id/tv_post_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="right"
+                            android:textSize="@dimen/text_normal"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_start_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_row_height"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/ic_size_small"
+                            android:layout_height="@dimen/ic_size_small"
+                            android:src="@drawable/tf_date_b"/>
+
+                        <TextView
+                            android:id="@+id/tv_start_date_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/start_date_time"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_normal" />
+
+                        <TextView
+                            android:id="@+id/tv_start_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="right"
+                            android:textSize="@dimen/text_normal"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_availability"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_row_height"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/ic_size_small"
+                            android:layout_height="@dimen/ic_size_small"
+                            android:src="@drawable/tf_availability_b"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/availability"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_normal" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/btn_availability"
+                                android:layout_width="140dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/colorWhite"
+                                android:textAllCaps="false"
+                                android:background="@drawable/state_button_blue"
+                                android:text="@string/view_availability"
+                                android:textSize="@dimen/text_normal"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_row_height"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/ic_size_small"
+                            android:layout_height="@dimen/ic_size_small"
+                            android:src="@drawable/tf_dollar_b"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/job_value"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_normal" />
+
+                        <TextView
+                            android:id="@+id/tv_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="right"
+                            android:textSize="@dimen/text_normal"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_row_height"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/ic_size_small"
+                            android:layout_height="@dimen/ic_size_small"
+                            android:src="@drawable/tf_location_b"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/location"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_normal" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:textStyle="bold"
+                        android:gravity="right"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_normal"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_row_height"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/ic_size_small"
+                            android:layout_height="@dimen/ic_size_small"
+                            android:src="@drawable/tf_business_name_b"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/job_description"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_normal" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_normal"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constrainedHeight="true"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:scrollbars="vertical"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:background="@color/colorSpliteLine"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                        <Button
+                            android:id="@+id/btn_proposal"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorWhite"
+                            android:textAllCaps="false"
+                            android:background="@drawable/state_button_blue"
+                            android:text="@string/proposal"
+                            android:textSize="@dimen/text_normal"/>
+
+                        <Button
+                            android:id="@+id/btn_chat"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/activity_vertical_margin_normal"
+                            android:textColor="@color/colorWhite"
+                            android:textAllCaps="false"
+                            android:background="@drawable/state_button_blue"
+                            android:text="@string/chat"
+                            android:textSize="@dimen/text_normal"/>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_mark_complete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                        <Button
+                            android:id="@+id/btn_mark_complete"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorWhite"
+                            android:textAllCaps="false"
+                            android:background="@drawable/state_button_blue"
+                            android:text="@string/mark_job_complete"
+                            android:textSize="@dimen/text_normal"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>
